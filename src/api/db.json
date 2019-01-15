@@ -1,0 +1,34 @@
+{
+  "users": [
+    {
+      "id": 97670898,
+      "firstName": "Raymond",
+      "lastName": "Hartmann",
+      "email": "Emanuel74@hotmail.com"
+    },
+    {
+      "id": 35839142,
+      "firstName": "Alene",
+      "lastName": "Little",
+      "email": "Mariane.MacGyver33@gmail.com"
+    },
+    {
+      "id": 80367576,
+      "firstName": "Kavon",
+      "lastName": "Turner",
+      "email": "Adolfo_Crist@yahoo.com"
+    },
+    {
+      "id": 16564467,
+      "firstName": "Wilfrid",
+      "lastName": "Stroman",
+      "email": "Ibrahim.Satterfield46@hotmail.com"
+    },
+    {
+      "id": 40974003,
+      "firstName": "Garnet",
+      "lastName": "Ziemann",
+      "email": "Timmy29@gmail.com"
+    }
+  ]
+}
