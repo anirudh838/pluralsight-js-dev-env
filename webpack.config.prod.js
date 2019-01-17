@@ -39,17 +39,12 @@ export default {
       debug: false,
       noInfo: true // set to false to see a list of every file being bundled.
     }),
-
     // Generate an external css file with a hash in the filename
     new ExtractTextPlugin('[name].[md5:contenthash:hex:20].css'),
 
     // Hash the files using MD5 so that their names change when the content changes.
     new WebpackMd5Hash(),
 
-    // No longer used for Webpack 4. See optimization.splitChunks above instead.
-    // new webpack.optimize.CommonsChunkPlugin({
-    //   name: 'vendor'
-    // }),
     // Create HTML file that includes reference to bundled JS.
     new HtmlWebpackPlugin({
       template: 'src/index.html',
@@ -69,16 +64,12 @@ export default {
       // Properties you define here are available in index.html
       // using htmlWebpackPlugin.options.varName
       trackJSToken: 'd188a4963c5c418a8af2fc16bca2d8eb'
-    })
-
-    // Minify JS
-    // Code is automatically minified in prod mode as of Webpack 4, so removing this.
-    // new webpack.optimize.UglifyJsPlugin()
+    }),
   ],
   module: {
     rules: [
-      {test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader'},
-      {test: /\.css$/, loader: ExtractTextPlugin.extract('css-loader?sourceMap')}
+      { test: /\.js$/, exclude: /node_modules/, loaders: ['babel-loader'] },
+      { test: /\.css$/, loader: ExtractTextPlugin.extract('css-loader?sourceMap') }
     ]
   }
 };
